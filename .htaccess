@@ -6,10 +6,9 @@ ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  # только HTTPS и без www
-  RewriteCond %{HTTPS} off [OR]
-  RewriteCond %{HTTP_HOST} ^www\. [NC]
-  RewriteRule ^ https://sobrano.ru%{REQUEST_URI} [L,R=301]
+  # только HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   # служебные файлы закрыты
   RewriteRule (^|/)\. - [F]
 </IfModule>
