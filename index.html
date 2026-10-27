@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Собрано — сайты, Telegram-боты и автоматизация для бизнеса</title>
+  <meta name="description" content="Собираем цифровые решения, которые работают: сайты и лендинги, Telegram-боты, автоматизация процессов и веб-сервисы для малого и среднего бизнеса.">
+  <meta name="theme-color" content="#F5F3EE">
+  <meta property="og:title" content="Собрано — цифровые решения для бизнеса">
+  <meta property="og:description" content="Сайты, Telegram-боты и автоматизация — от идеи до работающего продукта.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sobrano.ru/">
+  <link rel="canonical" href="https://sobrano.ru/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- Знак «Собрано»: квадратная «С» и собранный в неё модуль -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <path style="fill:var(--mc,#1B1B1B)" d="M12 0H45.5A2.5 2.5 0 0 1 48 2.5V11.5A2.5 2.5 0 0 1 45.5 14H16.5A2.5 2.5 0 0 0 14 16.5V31.5A2.5 2.5 0 0 0 16.5 34H45.5A2.5 2.5 0 0 1 48 36.5V45.5A2.5 2.5 0 0 1 45.5 48H12A12 12 0 0 1 0 36V12A12 12 0 0 1 12 0Z"/>
+      <rect style="fill:var(--ms,#B9F36A)" x="19" y="18" width="12" height="12" rx="2.5"/>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 12 12">
+      <path d="M3 9L9 3M4.2 3H9V7.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 12 12">
+      <path d="M2.5 6.3L5 8.7L9.5 3.6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="Собрано — на главную">
+      <svg class="logo__mark" width="30" height="30"><use href="#mark"/></svg>
+      <span class="logo__word">Собрано</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a>
+      <a href="#about">О нас</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn--dark btn--sm header__cta" href="#contacts">Обсудить проект</a>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#services">Услуги</a>
+    <a href="#works">Работы</a>
+    <a href="#about">О нас</a>
+    <a href="#pricing">Стоимость</a>
+    <a href="#contacts">Контакты</a>
+    <a class="btn btn--lime" href="#contacts">Обсудить проект</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <div class="eyebrow reveal"><i></i>ЦИФРОВЫЕ РЕШЕНИЯ ДЛЯ БИЗНЕСА</div>
+        <h1 class="hero__title reveal">Собираем цифровые решения, которые <mark>работают</mark></h1>
+        <p class="hero__lead reveal">Сайты, лендинги, Telegram-боты и автоматизация для бизнеса — от идеи и дизайна до запуска и поддержки.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--lime" href="#contacts">Обсудить проект <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
+          <a class="btn btn--ghost" href="#works">Мои работы</a>
+        </div>
+        <div class="hero__svc reveal">
+          <a class="mini-card" href="#services">
+            <span class="mini-card__ic">
+              <svg width="18" height="18" viewBox="0 0 18 18"><rect x="1" y="1" width="16" height="5" rx="1.5" fill="#1B1B1B"/><rect x="1" y="8" width="7" height="9" rx="1.5" fill="#1B1B1B"/><rect x="10" y="8" width="7" height="9" rx="1.5" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.2"/></svg>
+            </span>
+            <svg class="mini-card__go" width="14" height="14"><use href="#arrow"/></svg>
+            <strong>Сайты</strong>
+            <span>Лендинги, корпоративные сайты, доработка</span>
+          </a>
+          <a class="mini-card" href="#services">
+            <span class="mini-card__ic">
+              <svg width="18" height="18" viewBox="0 0 18 18"><rect x="1" y="1" width="6" height="6" rx="1.5" fill="#1B1B1B"/><rect x="11" y="11" width="6" height="6" rx="1.5" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.2"/><path d="M4 7V11.5A2.5 2.5 0 0 0 6.5 14H11" fill="none" stroke="#1B1B1B" stroke-width="1.6"/></svg>
+            </span>
+            <svg class="mini-card__go" width="14" height="14"><use href="#arrow"/></svg>
+            <strong>Автоматизация</strong>
+            <span>Telegram-боты, интеграции, веб-сервисы</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <div class="stage">
+          <div class="stage__inner">
+            <div class="laptop">
+              <div class="laptop__lid">
+                <div class="laptop__scr">
+                  <div class="cs">
+                    <div class="cs__bar">
+                      <div class="cs__logo"><i></i>ЛИНИЯ</div>
+                      <div class="cs__nav"><span>Проекты</span><span>Бюро</span><span>Подход</span><span>Контакты</span></div>
+                      <div class="cs__btn">Консультация</div>
+                    </div>
+                    <div class="cs__hd">
+                      <div>
+                        <div class="cs__eyebrow">АРХИТЕКТУРНОЕ БЮРО</div>
+                        <div class="cs__h">Дома, в которых хочется жить</div>
+                        <div class="cs__tx">Проектируем частные дома и интерьеры под ключ — от концепции до авторского надзора.</div>
+                        <div class="cs__row"><span class="dark">Смотреть проекты</span><span>Рассчитать</span></div>
+                      </div>
+                      <div class="cs__img"><div class="sun"></div><div class="b1"></div><div class="b2"></div></div>
+                    </div>
+                    <div class="cs__stats">
+                      <div><b>120+</b>проектов</div>
+                      <div><b>14 лет</b>на рынке</div>
+                      <div><b>4,9</b>рейтинг</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop__base"></div>
+            </div>
+
+            <div class="phone">
+              <div class="phone__scr">
+                <div class="phone__isl"></div>
+                <div class="chat__head">
+                  <div class="chat__av"><svg width="12" height="12" style="--mc:#F5F3EE"><use href="#mark"/></svg></div>
+                  <div><b>Бот заявок</b><small>онлайн · автоматизация</small></div>
+                </div>
+                <div class="chat">
+                  <div class="bub bub--in">
+                    <div class="bub__t"><i></i>Новая заявка с сайта</div>
+                    <div class="bub__kv"><span>Имя</span>Анна<span>Услуга</span>Лендинг<span>Бюджет</span>от 80 000 ₽</div>
+                  </div>
+                  <div class="chat__kb"><span class="on">Принять</span><span>Позвонить</span></div>
+                  <div class="bub bub--sys"><span class="tick"><svg width="7" height="7"><use href="#check"/></svg></span>Заявка добавлена в CRM</div>
+                </div>
+                <div class="chat__inp">Сообщение…</div>
+              </div>
+            </div>
+
+            <div class="float-tag">
+              <span class="float-tag__sq"><svg width="14" height="14" style="--ms:#1B1B1B"><use href="#mark"/></svg></span>
+              <div>Проект собран<small>от идеи до запуска</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STRIP ============ -->
+  <section class="strip" aria-label="Коротко о подходе">
+    <div class="container strip__inner">
+      <div class="strip__item"><b>Под ключ</b><span>Идея, дизайн, разработка и запуск — в одних руках</span></div>
+      <div class="strip__item"><b>Прозрачно</b><span>Смета и сроки фиксируем до старта работ</span></div>
+      <div class="strip__item"><b>Ваше — ваше</b><span>Код, домен и доступы принадлежат вам</span></div>
+      <div class="strip__item"><b>На связи</b><span>Поддерживаем и дорабатываем после запуска</span></div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <div class="label reveal">Услуги</div>
+          <h2 class="h2 reveal">Что собираем</h2>
+        </div>
+        <p class="section__lead reveal">Берём задачу бизнеса и превращаем её в готовый инструмент: сайт, который приводит заявки, или бота, который снимает рутину с команды.</p>
+      </div>
+
+      <div class="services">
+        <article class="svc reveal">
+          <div class="svc__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="1" width="20" height="6" rx="2" fill="#1B1B1B"/><rect x="1" y="9" width="20" height="5" rx="2" fill="#1B1B1B" opacity=".35"/><rect x="1" y="16" width="9" height="5" rx="2" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.3"/></svg></div>
+          <h3>Лендинги</h3>
+          <p>Одностраничные сайты под конкретный продукт или рекламную кампанию — с понятной структурой и формой заявки.</p>
+          <ul><li>Прототип и тексты</li><li>Адаптив под телефоны</li><li>Аналитика и цели</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="1" width="20" height="6" rx="2" fill="#1B1B1B"/><rect x="1" y="9" width="9" height="12" rx="2" fill="#1B1B1B"/><rect x="12" y="9" width="9" height="12" rx="2" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.3"/></svg></div>
+          <h3>Корпоративные сайты</h3>
+          <p>Многостраничные сайты компаний: услуги, кейсы, команда, контакты. Удобная админка, чтобы обновлять контент самим.</p>
+          <ul><li>Структура и дизайн</li><li>Управление контентом</li><li>Базовое SEO</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="2" width="14" height="9" rx="2.5" fill="#1B1B1B"/><rect x="7" y="13" width="14" height="7" rx="2.5" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.3"/></svg></div>
+          <h3>Telegram-боты</h3>
+          <p>Боты для записи, приёма заявок, оплаты и ответов на частые вопросы. Работают круглосуточно и не теряют клиентов.</p>
+          <ul><li>Запись и заявки</li><li>Оплата и уведомления</li><li>Связка с CRM и таблицами</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="1" width="7" height="7" rx="2" fill="#1B1B1B"/><rect x="14" y="14" width="7" height="7" rx="2" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.3"/><path d="M4.5 8V14A3 3 0 0 0 7.5 17H14" fill="none" stroke="#1B1B1B" stroke-width="1.8"/><rect x="14" y="1" width="7" height="7" rx="2" fill="#1B1B1B" opacity=".35"/></svg></div>
+          <h3>Автоматизация процессов</h3>
+          <p>Убираем ручную работу: заявки сами попадают в CRM, отчёты собираются автоматически, команда получает уведомления.</p>
+          <ul><li>Интеграции сервисов</li><li>Уведомления и отчёты</li><li>Google Таблицы, CRM, 1С</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="1" width="20" height="20" rx="3" fill="none" stroke="#1B1B1B" stroke-width="1.8"/><rect x="5" y="12" width="3" height="5" rx="1" fill="#1B1B1B"/><rect x="9.5" y="8" width="3" height="9" rx="1" fill="#1B1B1B"/><rect x="14" y="5" width="3" height="12" rx="1" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.1"/></svg></div>
+          <h3>Веб-сервисы</h3>
+          <p>Небольшие сервисы под вашу задачу: личные кабинеты, калькуляторы, панели заявок и внутренние инструменты.</p>
+          <ul><li>Проектирование логики</li><li>Личные кабинеты</li><li>Панели и отчёты</li></ul>
+        </article>
+        <article class="svc reveal">
+          <div class="svc__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="1" width="20" height="20" rx="3" fill="#1B1B1B"/><rect x="11" y="11" width="10" height="10" rx="3" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.3"/></svg></div>
+          <h3>Доработка сайтов</h3>
+          <p>Ускоряем, чиним и улучшаем то, что уже есть: новый дизайн блоков, адаптив, формы, интеграции и скорость загрузки.</p>
+          <ul><li>Аудит и план работ</li><li>Скорость и адаптив</li><li>Новые блоки и функции</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section class="section section--card" id="process">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <div class="label reveal">Процесс</div>
+          <h2 class="h2 reveal">Как мы собираем проект</h2>
+        </div>
+        <p class="section__lead reveal">Четыре понятных этапа. На каждом вы видите результат и согласуете его, прежде чем двигаться дальше.</p>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <div class="step__mods"><i class="on"></i><i></i><i></i><i></i></div>
+          <span class="step__n">01</span>
+          <h3>Разбор задачи</h3>
+          <p>Созваниваемся, разбираем цели и ограничения. Фиксируем объём, сроки и стоимость.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step__mods"><i class="on"></i><i class="on"></i><i></i><i></i></div>
+          <span class="step__n">02</span>
+          <h3>Прототип и дизайн</h3>
+          <p>Собираем структуру, пишем тексты и делаем дизайн в вашем стиле.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step__mods"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+          <span class="step__n">03</span>
+          <h3>Разработка</h3>
+          <p>Программируем, подключаем интеграции, тестируем на телефонах и компьютерах.</p>
+        </li>
+        <li class="step reveal">
+          <div class="step__mods"><i class="on"></i><i class="on"></i><i class="on"></i><i class="lime"></i></div>
+          <span class="step__n">04</span>
+          <h3>Запуск и поддержка</h3>
+          <p>Публикуем, настраиваем аналитику, передаём доступы и остаёмся на связи.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ WORKS ============ -->
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <div class="label reveal">Работы</div>
+          <h2 class="h2 reveal">Что мы уже собрали</h2>
+        </div>
+        <p class="section__lead reveal">Сайты, которые мы спроектировали и собрали с нуля: от структуры и текстов до анимаций, мобильной версии и отправки заявок.</p>
+      </div>
+
+      <div class="works">
+        <article class="work work--wide reveal">
+          <div class="work__shot work__shot--duo">
+            <div class="vbrowser">
+              <div class="vbrowser__bar"><i></i><i></i><i></i><span>Стоматология «Персона»</span></div>
+              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/persona-desktop.jpg" data-src="assets/works/persona-desktop.mp4"></video>
+            </div>
+            <div class="vphone vphone--float">
+              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/persona-mobile.jpg" data-src="assets/works/persona-mobile.mp4"></video>
+            </div>
+          </div>
+          <div class="work__meta">
+            <div class="tags"><span>Сайт клиники</span><span>7 страниц</span><span>Запись в Telegram</span></div>
+            <h3>Стоматология «Персона», Серов</h3>
+            <p>Многостраничный сайт семейной клиники: услуги и цены, врачи, работы «до и после», статьи, документы и онлайн-запись с отправкой заявок в Telegram.</p>
+          </div>
+        </article>
+
+        <article class="work work--wide reveal">
+          <div class="work__shot work__shot--duo">
+            <div class="vbrowser">
+              <div class="vbrowser__bar"><i></i><i></i><i></i><span>Стоматология «Логистика»</span></div>
+              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/logistika-desktop.jpg" data-src="assets/works/logistika-desktop.mp4"></video>
+            </div>
+            <div class="vphone vphone--float">
+              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/logistika-mobile.jpg" data-src="assets/works/logistika-mobile.mp4"></video>
+            </div>
+          </div>
+          <div class="work__meta">
+            <div class="tags"><span>Сайт клиники</span><span>3D-логотип</span><span>Видео</span></div>
+            <h3>Стоматология «Логистика», Серов</h3>
+            <p>Сайт клиники с двумя филиалами: интерактивный 3D-знак, видео о клинике, выбор врача и услуги, ответы на частые вопросы и запись на приём.</p>
+            <a class="work__open" href="https://sulemenevarse-png.github.io/logistika/" target="_blank" rel="noopener">Открыть сайт <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <div class="work__shot work__shot--bot">
+            <div class="ws-chat bot-loop" aria-hidden="true">
+              <div class="ws-chat__msg ws-chat__msg--card">
+                <b>Новая запись с сайта</b>
+                <span>Анна · профгигиена</span>
+                <span>Завтра, 15:30 · филиал на Ленина</span>
+              </div>
+              <div class="ws-chat__slots"><span class="on">Подтвердить</span><span>Перезвонить</span></div>
+              <div class="ws-chat__me">Подтвердить</div>
+              <div class="ws-chat__typing"><i></i><i></i><i></i></div>
+              <div class="ws-chat__ok"><span class="tick"><svg width="8" height="8"><use href="#check"/></svg></span>Запись подтверждена, пациенту ушло напоминание</div>
+            </div>
+          </div>
+          <div class="work__meta">
+            <div class="tags"><span>Telegram-бот</span><span>Автоматизация</span></div>
+            <h3>Заявки с сайта — сразу в Telegram</h3>
+            <p>Администратор получает запись в мессенджер и подтверждает её одной кнопкой. Ни одна заявка не теряется в почте.</p>
+          </div>
+        </article>
+
+        <a class="work work--next reveal" href="#contacts">
+          <div class="work__next-mods" aria-hidden="true"><i></i><i></i><i></i><i class="lime"></i></div>
+          <h3>Ваш проект — следующий</h3>
+          <p>Расскажите о задаче — покажем похожие решения и предложим план с ценой и сроками.</p>
+          <span class="btn btn--lime">Обсудить проект <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section section--dark" id="about">
+    <div class="container about">
+      <div class="about__text">
+        <div class="label label--dark reveal">О нас</div>
+        <h2 class="h2 reveal">Студия, которая доводит до&nbsp;результата</h2>
+        <p class="reveal">«Собрано» — это про порядок. Мы соединяем идею, дизайн и технологии в продукт, который запускается в срок и работает на бизнес, а не просто красиво выглядит.</p>
+        <p class="reveal">Работаем с малым и средним бизнесом и с компаниями, которым нужен надёжный подрядчик без лишней бюрократии: один контакт, понятный план и честные сроки.</p>
+        <a class="btn btn--lime reveal" href="#contacts">Обсудить проект <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
+      </div>
+      <div class="principles">
+        <div class="principle reveal"><span class="principle__n">01</span><h3>Сначала задача, потом технологии</h3><p>Предлагаем решение, которое окупается, а не самое дорогое.</p></div>
+        <div class="principle reveal"><span class="principle__n">02</span><h3>Фиксированная смета</h3><p>Стоимость и сроки известны до начала работ и не меняются по ходу.</p></div>
+        <div class="principle reveal"><span class="principle__n">03</span><h3>Внимание к деталям</h3><p>Проверяем каждую форму, отступ и экран — на телефоне и на компьютере.</p></div>
+        <div class="principle reveal"><span class="principle__n">04</span><h3>Без привязки к нам</h3><p>Код, домен, хостинг и доступы оформлены на вас.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <div class="label reveal">Стоимость</div>
+          <h2 class="h2 reveal">Сколько стоит собрать</h2>
+        </div>
+        <p class="section__lead reveal">Называем вилку честно. Точную цену фиксируем в смете после короткого созвона, и в процессе она не растёт.</p>
+      </div>
+
+      <div class="plans">
+        <div class="plan reveal">
+          <div class="plan__head">
+            <span class="plan__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="1" width="20" height="6" rx="2" fill="#1B1B1B"/><rect x="1" y="9" width="9" height="12" rx="2" fill="#1B1B1B"/><rect x="12" y="9" width="9" height="12" rx="2" fill="#B9F36A" stroke="#1B1B1B" stroke-width="1.3"/></svg></span>
+            <h3>Сайты</h3>
+            <span class="plan__time">от 7 дней</span>
+          </div>
+          <div class="plan__sum"><small>от</small>30 000<small>до</small>150 000<em>₽</em></div>
+          <div class="scale" aria-hidden="true">
+            <div class="scale__track"><i style="flex:3" class="lime"></i><i style="flex:9"></i></div>
+            <div class="scale__marks"><span style="flex:3">30 тыс.</span><span style="flex:9">60 тыс.</span><span>150 тыс.</span></div>
+          </div>
+          <ul class="plan__list">
+            <li><span>Лендинг или сайт-визитка</span><b>30–60 тыс. ₽</b></li>
+            <li><span>Корпоративный сайт, до 10 страниц</span><b>60–150 тыс. ₽</b></li>
+            <li><span>Доработка готового сайта</span><b>по задаче</b></li>
+          </ul>
+          <div class="plan__inc">Дизайн · адаптив · форма заявок · аналитика · запуск</div>
+          <a class="btn btn--ghost" href="#contacts">Обсудить сайт</a>
+        </div>
+
+        <div class="plan plan--dark reveal">
+          <div class="plan__head">
+            <span class="plan__ic"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="1" y="2" width="14" height="9" rx="2.5" fill="#F5F3EE"/><rect x="7" y="13" width="14" height="7" rx="2.5" fill="#B9F36A"/></svg></span>
+            <h3>Telegram-боты</h3>
+            <span class="plan__time">от 3 дней</span>
+          </div>
+          <div class="plan__sum"><small>от</small>8 000<em>₽</em></div>
+          <div class="scale" aria-hidden="true">
+            <div class="scale__track"><i style="flex:2" class="lime"></i><i style="flex:5"></i><i style="flex:5"></i></div>
+            <div class="scale__marks"><span style="flex:2">8 тыс.</span><span style="flex:10">10 тыс.</span><span>30 тыс.+</span></div>
+          </div>
+          <ul class="plan__list">
+            <li><span>Бот для заявок и ответов на вопросы</span><b>8–10 тыс. ₽</b></li>
+            <li><span>Запись, каталог, оплата</span><b>от 15 тыс. ₽</b></li>
+            <li><span>Интеграция с CRM и таблицами</span><b>от 30 тыс. ₽</b></li>
+          </ul>
+          <div class="plan__inc">Сценарий · тексты · админ-уведомления · запуск на сервере</div>
+          <a class="btn btn--lime" href="#contacts">Обсудить бота</a>
+        </div>
+      </div>
+
+      <div class="plan-wide reveal">
+        <div>
+          <h3>Автоматизация и веб-сервисы</h3>
+          <p>Интеграции, личные кабинеты, панели заявок — считаем индивидуально и присылаем смету за 1–2 дня.</p>
+        </div>
+        <a class="btn btn--dark" href="#contacts">Получить смету</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section--card" id="faq">
+    <div class="container faq">
+      <div>
+        <div class="label reveal">Вопросы</div>
+        <h2 class="h2 reveal">Частые вопросы</h2>
+      </div>
+      <div class="faq__list">
+        <details class="reveal"><summary>С чего начинается работа?</summary><p>С короткого созвона или переписки: вы рассказываете о задаче, мы задаём уточняющие вопросы и в течение 1–2 дней присылаем план, сроки и смету.</p></details>
+        <details class="reveal"><summary>Нужно ли готовить тексты и фотографии?</summary><p>Не обязательно. Мы поможем со структурой и текстами, подберём изображения или подскажем, что снять. Если материалы есть — используем их.</p></details>
+        <details class="reveal"><summary>Как проходит оплата?</summary><p>Обычно в два этапа: предоплата перед началом и остаток после запуска. Для больших проектов разбиваем оплату по этапам.</p></details>
+        <details class="reveal"><summary>Смогу ли я сам вносить изменения на сайт?</summary><p>Да. Подключаем удобную панель управления и показываем, как ей пользоваться. Сложные доработки можно поручить нам.</p></details>
+        <details class="reveal"><summary>Что будет после запуска?</summary><p>Даём гарантийный период на исправление ошибок, а дальше можем взять проект на поддержку: обновления, доработки и новые функции.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTS ============ -->
+  <section class="section" id="contacts">
+    <div class="container">
+      <div class="contact">
+        <div class="contact__text">
+          <div class="label label--dark">Контакты</div>
+          <h2 class="h2">Расскажите о задаче — соберём решение</h2>
+          <p>Ответим в течение рабочего дня, зададим пару уточняющих вопросов и предложим план.</p>
+          <div class="contact__links">
+            <a class="contact__link" data-contact="telegram" href="#">
+              <span>Telegram</span><b data-contact-label="telegram">@sobranoru</b>
+            </a>
+            <a class="contact__link" data-contact="email" href="#">
+              <span>Почта</span><b data-contact-label="email">hello@sobranos.ru</b>
+            </a>
+          </div>
+        </div>
+
+        <form class="form" id="lead-form" novalidate>
+          <label class="hp" aria-hidden="true">Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <div class="form__group">
+            <span class="form__label">Что нужно собрать?</span>
+            <div class="chips" role="group" aria-label="Тип проекта">
+              <label><input type="checkbox" name="service" value="Сайт" checked><span>Сайт</span></label>
+              <label><input type="checkbox" name="service" value="Лендинг"><span>Лендинг</span></label>
+              <label><input type="checkbox" name="service" value="Telegram-бот"><span>Telegram-бот</span></label>
+              <label><input type="checkbox" name="service" value="Автоматизация"><span>Автоматизация</span></label>
+              <label><input type="checkbox" name="service" value="Доработка"><span>Доработка</span></label>
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <span>Как вас зовут</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Имя" maxlength="100" required>
+            </label>
+            <label class="field">
+              <span>Телефон или Telegram</span>
+              <input type="text" name="contact" autocomplete="tel" placeholder="+7 900 000-00-00" maxlength="100" required>
+            </label>
+          </div>
+          <label class="field">
+            <span>Коротко о задаче</span>
+            <textarea name="message" rows="3" maxlength="2000" placeholder="Например: нужен лендинг для студии ремонта и бот для приёма заявок"></textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span class="consent__box"><svg width="10" height="10"><use href="#check"/></svg></span>
+            <span>Даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a> и принимаю <a href="privacy.html" target="_blank">политику конфиденциальности</a></span>
+          </label>
+          <div class="form__foot">
+            <button class="btn btn--lime" type="submit">Отправить заявку <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></button>
+          </div>
+          <div class="form__status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a class="logo" href="#top" aria-label="Собрано — наверх">
+      <svg class="logo__mark" width="24" height="24"><use href="#mark"/></svg>
+      <span class="logo__word" style="font-size:19px">Собрано</span>
+    </a>
+    <span class="footer__tag">Сайты · Боты · Автоматизация</span>
+    <nav class="footer__nav" aria-label="Навигация в подвале">
+      <a href="#services">Услуги</a><a href="#works">Работы</a><a href="#about">О нас</a><a href="#contacts">Контакты</a>
+    </nav>
+    <span class="footer__copy">© <span id="year">2026</span> Собрано</span>
+    <div class="footer__legal"><a href="privacy.html">Политика конфиденциальности</a><a href="consent.html">Согласие на обработку данных</a></div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
