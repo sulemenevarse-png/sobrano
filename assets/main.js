@@ -5,7 +5,7 @@
 // Контакты и отправка заявок — поменяйте на свои
 const CONFIG = {
   telegram: 'sobranoru',          // юзернейм без @
-  email: 'hello@sobranos.ru',
+  email: 'senyasule@yandex.ru',
   // Адрес, принимающий POST с JSON заявки (свой бэкенд, Formspree, вебхук бота и т.п.).
   // Пока пусто — форма откроет письмо с заполненной заявкой.
   // Внешний адрес нужно добавить в connect-src политики безопасности (<meta http-equiv="Content-Security-Policy">).
