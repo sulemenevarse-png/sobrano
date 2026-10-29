@@ -99,7 +99,7 @@ let toastTimer;
 
 function showToast() {
   toast.innerHTML = '<span class="toast__icon"><svg width="14" height="14"><use href="#check"/></svg></span>'
-    + '<span><b>Заявка доставлена</b><small>Ответим в течение рабочего дня</small></span>';
+    + '<b>Заявка доставлена</b>';
   toast.classList.add('is-shown');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('is-shown'), TOAST_MS);

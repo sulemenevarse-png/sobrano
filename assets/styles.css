@@ -386,7 +386,7 @@ button, input, textarea { font: inherit; color: inherit; }
 .toast {
   position: fixed; top: 16px; left: 50%; z-index: 100;
   display: flex; align-items: center; gap: 12px; width: max-content; max-width: calc(100% - 32px);
-  padding: 12px 22px 12px 12px; border-radius: 18px; background: var(--lime); color: var(--ink);
+  padding: 10px 22px 10px 10px; border-radius: 999px; background: var(--lime); color: var(--ink);
   box-shadow: 0 18px 40px -12px rgba(27, 27, 27, .35); pointer-events: none;
   opacity: 0; visibility: hidden; transform: translate(-50%, calc(-100% - 24px));
   transition: transform .45s var(--ease), opacity .3s, visibility 0s .45s;
@@ -394,7 +394,6 @@ button, input, textarea { font: inherit; color: inherit; }
 .toast.is-shown { opacity: 1; visibility: visible; transform: translate(-50%, 0); transition: transform .45s var(--ease), opacity .3s; }
 .toast__icon { width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: var(--lime); display: grid; place-items: center; flex: none; }
 .toast b { display: block; font-size: 15px; font-weight: 700; line-height: 1.3; }
-.toast small { display: block; font-size: 13px; line-height: 1.35; color: rgba(27, 27, 27, .72); }
 
 /* ---------- Reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
