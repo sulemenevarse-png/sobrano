@@ -92,6 +92,19 @@ if (stage) {
   else window.addEventListener('resize', fit);
 }
 
+/* ---------- Уведомление об отправке ---------- */
+const toast = document.querySelector('.toast');
+const TOAST_MS = 4000; // сколько секунд плашка видна
+let toastTimer;
+
+function showToast() {
+  toast.innerHTML = '<span class="toast__icon"><svg width="14" height="14"><use href="#check"/></svg></span>'
+    + '<span><b>Заявка доставлена</b><small>Ответим в течение рабочего дня</small></span>';
+  toast.classList.add('is-shown');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('is-shown'), TOAST_MS);
+}
+
 /* ---------- Форма заявки ---------- */
 const form = document.getElementById('lead-form');
 const status = form.querySelector('.form__status');
@@ -164,8 +177,9 @@ form.addEventListener('submit', async (e) => {
       location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Заявка с сайта Собрано')}&body=${encodeURIComponent(body)}`;
     }
     lastSent = Date.now();
-    status.className = 'form__status is-ok';
-    status.innerHTML = '<span class="tick"><svg width="8" height="8"><use href="#check"/></svg></span>Заявка собрана — ответим в течение рабочего дня.';
+    status.className = 'form__status';
+    status.textContent = '';
+    showToast();
     form.reset();
   } catch (err) {
     status.className = 'form__status';
