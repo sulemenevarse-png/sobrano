@@ -482,10 +482,11 @@
           <label class="consent">
             <input type="checkbox" name="consent" required>
             <span class="consent__box"><svg width="10" height="10"><use href="#check"/></svg></span>
-            <span>Даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a> и принимаю <a href="privacy.html" target="_blank">политику конфиденциальности</a></span>
+            <span>Даю <a href="consent.html" target="_blank">согласие на обработку персональных данных</a></span>
           </label>
           <div class="form__foot">
-            <button class="btn btn--lime" type="submit">Отправить заявку <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></button>
+            <button class="btn btn--lime" type="submit" disabled>Отправить заявку <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></button>
+            <small>Как мы храним и защищаем данные — в <a href="privacy.html" target="_blank">политике конфиденциальности</a></small>
           </div>
           <div class="form__status" role="status" aria-live="polite"></div>
         </form>

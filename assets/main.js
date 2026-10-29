@@ -95,6 +95,12 @@ if (stage) {
 /* ---------- Форма заявки ---------- */
 const form = document.getElementById('lead-form');
 const status = form.querySelector('.form__status');
+const button = form.querySelector('button[type="submit"]');
+
+// Отправить заявку можно только после согласия на обработку персональных данных
+const syncSubmit = () => { button.disabled = !form.elements.consent.checked; };
+form.elements.consent.addEventListener('change', syncSubmit);
+syncSubmit();
 
 const SEND_INTERVAL = 30 * 1000; // не чаще одной заявки в 30 секунд
 let lastSent = 0;
@@ -136,7 +142,6 @@ form.addEventListener('submit', async (e) => {
     site: 'sobrano',
   };
 
-  const button = form.querySelector('button[type="submit"]');
   button.disabled = true;
 
   try {
@@ -166,7 +171,7 @@ form.addEventListener('submit', async (e) => {
     status.className = 'form__status';
     status.textContent = `Не получилось отправить. Напишите нам в Telegram: @${CONFIG.telegram}`;
   } finally {
-    button.disabled = false;
+    syncSubmit();
   }
 });
 
