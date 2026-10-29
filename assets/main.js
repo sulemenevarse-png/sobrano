@@ -6,10 +6,9 @@
 const CONFIG = {
   telegram: 'sobranoru',          // юзернейм без @
   email: 'senyasule@yandex.ru',
-  // Адрес, принимающий POST с JSON заявки (свой бэкенд, Formspree, вебхук бота и т.п.).
+  // Google Apps Script (tools/telegram-leads.gs), пересылает заявки в Telegram.
   // Пока пусто — форма откроет письмо с заполненной заявкой.
-  // Внешний адрес нужно добавить в connect-src политики безопасности (<meta http-equiv="Content-Security-Policy">).
-  formEndpoint: '',
+  formEndpoint: 'https://script.google.com/macros/s/AKfycbwxt695TMEJis5lL3rBPPfHCQgLHG_ZI2ie85LQIvIaLlwgsBlZEqlyB0b7uRoIUAY1AQ/exec',
 };
 
 document.documentElement.classList.add('js');
@@ -134,6 +133,7 @@ form.addEventListener('submit', async (e) => {
     contact: form.elements.contact.value.trim().slice(0, 100),
     message: form.elements.message.value.trim().slice(0, 2000),
     page: location.href,
+    site: 'sobrano',
   };
 
   const button = form.querySelector('button[type="submit"]');
@@ -141,12 +141,13 @@ form.addEventListener('submit', async (e) => {
 
   try {
     if (CONFIG.formEndpoint) {
+      // text/plain — чтобы Google принял запрос без предварительной CORS-проверки
       const res = await fetch(CONFIG.formEndpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok || !(await res.json()).ok) throw new Error(`HTTP ${res.status}`);
     } else {
       const body = [
         `Имя: ${data.name}`,
