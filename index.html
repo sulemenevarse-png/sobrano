@@ -295,12 +295,11 @@
         <button class="folder reveal" type="button" role="tab" id="tab-bots" aria-controls="panel-bots" aria-selected="false" tabindex="-1" data-folder="bots">
           <span class="folder__tab"></span>
           <span class="folder__papers folder__papers--bots" aria-hidden="true">
-            <img src="assets/works/morok-avatar.png" alt="" loading="lazy">
             <span class="folder__paper-chat"><b>Новая запись</b><i></i><i></i></span>
           </span>
           <span class="folder__front">
             <span class="folder__name">Telegram-боты</span>
-            <span class="folder__count">2 проекта</span>
+            <span class="folder__count">1 проект</span>
           </span>
         </button>
       </div>
@@ -309,10 +308,11 @@
       <div class="folder-panel" role="tabpanel" id="panel-sites" aria-labelledby="tab-sites">
         <div class="cases">
           <article class="case">
-            <div class="case__shot">
+            <button class="case__shot case__shot--open" type="button" data-viewer="video" data-title="Стоматология «Персона»" data-desktop="assets/works/persona-desktop.mp4" data-mobile="assets/works/persona-mobile.mp4" aria-label="Смотреть: Стоматология «Персона»">
               <div class="case__bar"><i></i><i></i><i></i><span>Стоматология «Персона»</span></div>
-              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/persona-desktop.jpg" data-src="assets/works/persona-desktop.mp4" aria-label="Прокрутка сайта стоматологии «Персона»"></video>
-            </div>
+              <img src="assets/works/persona-desktop.jpg" alt="" loading="lazy">
+              <span class="case__play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg>Смотреть</span>
+            </button>
             <div class="case__meta">
               <div class="tags"><span>Сайт клиники</span><span>7 страниц</span><span>Запись в Telegram</span></div>
               <h3>Стоматология «Персона», Серов</h3>
@@ -320,10 +320,11 @@
             </div>
           </article>
           <article class="case">
-            <div class="case__shot">
+            <button class="case__shot case__shot--open" type="button" data-viewer="video" data-title="Стоматология «Логистика»" data-desktop="assets/works/logistika-desktop.mp4" data-mobile="assets/works/logistika-mobile.mp4" aria-label="Смотреть: Стоматология «Логистика»">
               <div class="case__bar"><i></i><i></i><i></i><span>Стоматология «Логистика»</span></div>
-              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/logistika-desktop.jpg" data-src="assets/works/logistika-desktop.mp4" aria-label="Прокрутка сайта стоматологии «Логистика»"></video>
-            </div>
+              <img src="assets/works/logistika-desktop.jpg" alt="" loading="lazy">
+              <span class="case__play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg>Смотреть</span>
+            </button>
             <div class="case__meta">
               <div class="tags"><span>Сайт клиники</span><span>3D-логотип</span><span>Видео</span></div>
               <h3>Стоматология «Логистика», Серов</h3>
@@ -332,10 +333,11 @@
             </div>
           </article>
           <article class="case">
-            <div class="case__shot">
+            <button class="case__shot case__shot--open" type="button" data-viewer="scroll" data-title="Трекод" data-full="assets/works/trekod-full.jpg" aria-label="Смотреть: Трекод">
               <div class="case__bar"><i></i><i></i><i></i><span>Трекод</span></div>
-              <img class="case__scroll" src="assets/works/trekod-full.jpg" alt="Сайт сервиса «Трекод»" loading="lazy">
-            </div>
+              <img src="assets/works/trekod-desktop.jpg" alt="" loading="lazy">
+              <span class="case__play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg>Смотреть</span>
+            </button>
             <div class="case__meta">
               <div class="tags"><span>B2B-сайт</span><span>Квиз</span><span>Заявки</span></div>
               <h3>«Трекод» — маркировка стройматериалов</h3>
@@ -348,11 +350,12 @@
       <!-- Веб-сервисы -->
       <div class="folder-panel" role="tabpanel" id="panel-services" aria-labelledby="tab-services" hidden>
         <div class="cases">
-          <article class="case case--wide">
-            <div class="case__shot">
+          <article class="case">
+            <button class="case__shot case__shot--open" type="button" data-viewer="scroll" data-title="ПлатилЛи" data-full="assets/works/platil-full.jpg" aria-label="Смотреть: ПлатилЛи">
               <div class="case__bar"><i></i><i></i><i></i><span>ПлатилЛи</span></div>
-              <img class="case__scroll" src="assets/works/platil-full.jpg" alt="Сайт сервиса «ПлатилЛи» с калькулятором пени" loading="lazy">
-            </div>
+              <img src="assets/works/platil-desktop.jpg" alt="" loading="lazy">
+              <span class="case__play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.8v10.4L12 7z" fill="currentColor"/></svg>Смотреть</span>
+            </button>
             <div class="case__meta">
               <div class="tags"><span>Веб-сервис</span><span>Калькулятор</span><span>Личный кабинет</span></div>
               <h3>«ПлатилЛи» — контроль оплаты госконтрактов</h3>
@@ -366,24 +369,6 @@
       <!-- Telegram-боты -->
       <div class="folder-panel" role="tabpanel" id="panel-bots" aria-labelledby="tab-bots" hidden>
         <div class="cases">
-          <article class="case">
-            <div class="case__shot case__shot--morok">
-              <img class="case__avatar" src="assets/works/morok-avatar.png" alt="Аватар бота «Морок»" loading="lazy">
-              <div class="case__chat case__chat--dark chat-loop" aria-hidden="true">
-                <span class="m">Туман сгущается у брода. За частоколом кто-то зовёт тебя по имени. Что делаешь?</span>
-                <span class="me">Зажигаю факел и иду к воротам</span>
-                <span class="typing"><i></i><i></i><i></i></span>
-                <span class="m">Пламя дрожит. Из тумана выходит девочка в мокрой рубахе — но следов на грязи за ней нет.</span>
-                <span class="me">Достаю серебряную монету</span>
-              </div>
-            </div>
-            <div class="case__meta">
-              <div class="tags"><span>Telegram-бот</span><span>Игра</span><span>ИИ</span></div>
-              <h3>«Морок» — ИИ-мастер ролевых игр</h3>
-              <p>Бот ведёт текстовые ролевые игры в тёмном фэнтези — в групповом чате на 2–5 друзей или в личке. Сам описывает мир, персонажей и последствия решений игроков.</p>
-              <a class="work__open" href="https://t.me/morok_rpg_bot" target="_blank" rel="noopener">Открыть в Telegram <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
-            </div>
-          </article>
           <article class="case">
             <div class="case__shot case__shot--chat">
               <div class="case__chat chat-loop" aria-hidden="true">
@@ -411,6 +396,22 @@
       </a>
     </div>
   </section>
+
+
+  <!-- ============ VIEWER ============ -->
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer__box">
+      <div class="viewer__head">
+        <b id="viewer-title"></b>
+        <div class="viewer__modes" role="group" aria-label="Версия">
+          <button type="button" data-mode="desktop" class="on">Компьютер</button>
+          <button type="button" data-mode="mobile">Телефон</button>
+        </div>
+        <button type="button" class="viewer__close" aria-label="Закрыть">✕</button>
+      </div>
+      <div class="viewer__stage"></div>
+    </div>
+  </dialog>
 
   <!-- ============ ABOUT ============ -->
   <section class="section section--dark" id="about">

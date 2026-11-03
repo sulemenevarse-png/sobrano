@@ -747,3 +747,51 @@ button, input, textarea { font: inherit; color: inherit; }
 .case__shot--morok .case__chat--dark { font-size: 11.5px; gap: 6px; }
 @media (prefers-reduced-motion: reduce) { .case__shot img.case__scroll { animation: none; } }
 .case__shot--morok .case__chat--dark { align-self: stretch; justify-content: flex-end; overflow: hidden; }
+
+/* Работы: карточка открывается по нажатию, видео — в окне просмотра */
+.case__shot--open { display: block; width: auto; padding: 0; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.case__shot--open img { display: block; }
+.case__play {
+  position: absolute; left: 50%; top: calc(50% + 15px); transform: translate(-50%, -50%) scale(.96);
+  display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border-radius: 999px;
+  background: var(--ink); color: var(--bg); font-size: 14px; font-weight: 700; box-shadow: 0 10px 30px rgba(27, 27, 27, .25);
+  opacity: 0; transition: opacity .25s, transform .25s var(--ease);
+}
+.case__play svg { color: var(--lime); }
+.case__shot--open:hover .case__play, .case__shot--open:focus-visible .case__play { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.case__shot--open::after { content: ""; position: absolute; inset: 30px 0 0; background: rgba(27, 27, 27, 0); transition: background-color .25s; }
+.case__shot--open:hover::after { background: rgba(27, 27, 27, .12); }
+@media (hover: none) { .case__play { opacity: 1; transform: translate(-50%, -50%) scale(1); height: 40px; } }
+
+.folder__papers--bots .folder__paper-chat { left: 50%; width: 52%; transform: translateX(-50%) translateY(20px) rotate(-3deg); }
+.folder:hover .folder__papers--bots .folder__paper-chat, .folder[aria-selected="true"] .folder__papers--bots .folder__paper-chat { transform: translateX(-50%) translateY(-8px) rotate(-4deg); }
+
+.viewer { width: min(1180px, calc(100vw - 32px)); max-width: none; max-height: calc(100vh - 32px); padding: 0; border: 0; border-radius: var(--radius); background: var(--bg); color: var(--ink); box-shadow: 0 30px 80px rgba(0, 0, 0, .35); }
+.viewer::backdrop { background: rgba(20, 20, 20, .62); backdrop-filter: blur(4px); }
+.viewer[open] { animation: viewer-in .3s var(--ease); }
+@keyframes viewer-in { from { opacity: 0; transform: translateY(12px) scale(.985); } to { opacity: 1; transform: none; } }
+.viewer__box { display: flex; flex-direction: column; max-height: calc(100vh - 32px); }
+.viewer__head { display: flex; align-items: center; gap: 14px; padding: 14px 16px 14px 22px; border-bottom: 1px solid var(--line); }
+.viewer__head b { font-size: 17px; font-weight: 700; letter-spacing: -.01em; margin-right: auto; }
+.viewer__modes { display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--card); }
+.viewer__modes[hidden] { display: none; }
+.viewer__modes button { height: 32px; padding: 0 14px; border: 0; border-radius: 9px; background: none; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--muted); }
+.viewer__modes button.on { background: var(--white); color: var(--ink); box-shadow: 0 1px 3px rgba(27, 27, 27, .1); }
+.viewer__close { width: 38px; height: 38px; border: 0; border-radius: 10px; background: var(--card); font-size: 15px; cursor: pointer; }
+.viewer__close:hover { background: #DCD9D2; }
+.viewer__stage { display: flex; justify-content: center; align-items: center; padding: 18px; background: #E3E0D9; overflow: hidden; min-height: 0; }
+.viewer__stage video { display: block; max-width: 100%; max-height: calc(100vh - 140px); border-radius: 12px; background: #111; }
+.viewer__stage video.is-mobile { max-height: calc(100vh - 140px); width: auto; border-radius: 22px; }
+.viewer__scroll { width: 100%; aspect-ratio: 16 / 10; max-height: calc(100vh - 140px); border-radius: 12px; overflow: hidden; background: var(--white); }
+.viewer__scroll img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; animation: shotscroll 32s ease-in-out infinite; }
+@media (max-width: 640px) {
+  .viewer { width: 100vw; max-height: 100vh; border-radius: 18px 18px 0 0; margin: auto 0 0; }
+  .viewer__head { padding: 12px 12px 12px 16px; gap: 8px; flex-wrap: wrap; }
+  .viewer__stage { padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .viewer__scroll img { animation: none; overflow-y: auto; } }
+/* «Смотреть» видно всегда, при наведении — акцент */
+.case__play { left: 14px; top: auto; bottom: 14px; transform: none; opacity: 1; height: 38px; padding: 0 14px; font-size: 13px; }
+.case__shot--open:hover .case__play, .case__shot--open:focus-visible .case__play { transform: translateY(-2px); background: var(--lime); color: var(--ink); }
+.case__shot--open:hover .case__play svg { color: var(--ink); }
+@media (hover: none) { .case__play { transform: none; height: 38px; } }
