@@ -251,3 +251,72 @@ if (bot && 'IntersectionObserver' in window && !reduceMotion) {
     }
   }, { threshold: 0.3 }).observe(bot);
 }
+
+/* ---------- Работы: папки ---------- */
+(() => {
+  const tabs = [...document.querySelectorAll('.folder[role="tab"]')];
+  if (!tabs.length) return;
+  const open = (tab, focus = false) => {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !on;
+    });
+    if (focus) tab.focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => {
+      open(t);
+      history.replaceState(null, '', '#works-' + t.dataset.folder);
+    });
+    t.addEventListener('keydown', (e) => {
+      const d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      open(tabs[(i + d + tabs.length) % tabs.length], true);
+    });
+  });
+  // Прямая ссылка на папку: #works-sites, #works-services, #works-bots
+  const m = location.hash.match(/^#works-(\w+)/);
+  const fromHash = m && tabs.find((t) => t.dataset.folder === m[1]);
+  if (fromHash) {
+    open(fromHash);
+    document.getElementById('works')?.scrollIntoView();
+  }
+})();
+
+/* ---------- Работы: переписки в карточках ботов появляются по очереди ---------- */
+document.querySelectorAll('.chat-loop').forEach((chat) => {
+  if (!('IntersectionObserver' in window) || reduceMotion) return;
+  const items = [...chat.children];
+  let timer = null;
+  let step = 0;
+  const tick = () => {
+    if (step === items.length) {
+      timer = setTimeout(() => {
+        items.forEach((el) => el.classList.remove('is-shown'));
+        step = 0;
+        timer = setTimeout(tick, 700);
+      }, 3200);
+      return;
+    }
+    const el = items[step++];
+    el.classList.add('is-shown');
+    if (el.classList.contains('typing')) {
+      timer = setTimeout(() => { el.classList.remove('is-shown'); tick(); }, 1200);
+    } else {
+      timer = setTimeout(tick, 1100);
+    }
+  };
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting && !timer) {
+      chat.classList.add('is-running');
+      timer = setTimeout(tick, 400);
+    } else if (!e.isIntersecting && timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+  }, { threshold: 0.3 }).observe(chat);
+});

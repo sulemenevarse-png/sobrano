@@ -266,73 +266,149 @@
           <div class="label reveal">Работы</div>
           <h2 class="h2 reveal">Что мы уже собрали</h2>
         </div>
-        <p class="section__lead reveal">Сайты, которые мы спроектировали и собрали с нуля: от структуры и текстов до анимаций, мобильной версии и отправки заявок.</p>
+        <p class="section__lead reveal">Сайты, веб-сервисы и Telegram-боты, которые мы спроектировали и собрали с нуля. Выберите папку, чтобы посмотреть проекты.</p>
       </div>
 
-      <div class="works">
-        <article class="work work--wide reveal">
-          <div class="work__shot work__shot--duo">
-            <div class="vbrowser">
-              <div class="vbrowser__bar"><i></i><i></i><i></i><span>Стоматология «Персона»</span></div>
-              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/persona-desktop.jpg" data-src="assets/works/persona-desktop.mp4"></video>
-            </div>
-            <div class="vphone vphone--float">
-              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/persona-mobile.jpg" data-src="assets/works/persona-mobile.mp4"></video>
-            </div>
-          </div>
-          <div class="work__meta">
-            <div class="tags"><span>Сайт клиники</span><span>7 страниц</span><span>Запись в Telegram</span></div>
-            <h3>Стоматология «Персона», Серов</h3>
-            <p>Многостраничный сайт семейной клиники: услуги и цены, врачи, работы «до и после», статьи, документы и онлайн-запись с отправкой заявок в Telegram.</p>
-          </div>
-        </article>
+      <div class="folders" role="tablist" aria-label="Категории работ">
+        <button class="folder reveal" type="button" role="tab" id="tab-sites" aria-controls="panel-sites" aria-selected="true" data-folder="sites">
+          <span class="folder__tab"></span>
+          <span class="folder__papers" aria-hidden="true">
+            <img src="assets/works/persona-desktop.jpg" alt="" loading="lazy">
+            <img src="assets/works/logistika-desktop.jpg" alt="" loading="lazy">
+            <img src="assets/works/trekod-desktop.jpg" alt="" loading="lazy">
+          </span>
+          <span class="folder__front">
+            <span class="folder__name">Сайты</span>
+            <span class="folder__count">3 проекта</span>
+          </span>
+        </button>
+        <button class="folder reveal" type="button" role="tab" id="tab-services" aria-controls="panel-services" aria-selected="false" tabindex="-1" data-folder="services">
+          <span class="folder__tab"></span>
+          <span class="folder__papers" aria-hidden="true">
+            <img src="assets/works/platil-desktop.jpg" alt="" loading="lazy">
+          </span>
+          <span class="folder__front">
+            <span class="folder__name">Веб-сервисы</span>
+            <span class="folder__count">1 проект</span>
+          </span>
+        </button>
+        <button class="folder reveal" type="button" role="tab" id="tab-bots" aria-controls="panel-bots" aria-selected="false" tabindex="-1" data-folder="bots">
+          <span class="folder__tab"></span>
+          <span class="folder__papers folder__papers--bots" aria-hidden="true">
+            <img src="assets/works/morok-avatar.png" alt="" loading="lazy">
+            <span class="folder__paper-chat"><b>Новая запись</b><i></i><i></i></span>
+          </span>
+          <span class="folder__front">
+            <span class="folder__name">Telegram-боты</span>
+            <span class="folder__count">2 проекта</span>
+          </span>
+        </button>
+      </div>
 
-        <article class="work work--wide reveal">
-          <div class="work__shot work__shot--duo">
-            <div class="vbrowser">
-              <div class="vbrowser__bar"><i></i><i></i><i></i><span>Стоматология «Логистика»</span></div>
-              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/logistika-desktop.jpg" data-src="assets/works/logistika-desktop.mp4"></video>
+      <!-- Сайты -->
+      <div class="folder-panel" role="tabpanel" id="panel-sites" aria-labelledby="tab-sites">
+        <div class="cases">
+          <article class="case">
+            <div class="case__shot">
+              <div class="case__bar"><i></i><i></i><i></i><span>Стоматология «Персона»</span></div>
+              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/persona-desktop.jpg" data-src="assets/works/persona-desktop.mp4" aria-label="Прокрутка сайта стоматологии «Персона»"></video>
             </div>
-            <div class="vphone vphone--float">
-              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/logistika-mobile.jpg" data-src="assets/works/logistika-mobile.mp4"></video>
+            <div class="case__meta">
+              <div class="tags"><span>Сайт клиники</span><span>7 страниц</span><span>Запись в Telegram</span></div>
+              <h3>Стоматология «Персона», Серов</h3>
+              <p>Многостраничный сайт семейной клиники: услуги и цены, врачи, работы «до и после», статьи, документы и онлайн-запись с отправкой заявок в Telegram.</p>
             </div>
-          </div>
-          <div class="work__meta">
-            <div class="tags"><span>Сайт клиники</span><span>3D-логотип</span><span>Видео</span></div>
-            <h3>Стоматология «Логистика», Серов</h3>
-            <p>Сайт клиники с двумя филиалами: интерактивный 3D-знак, видео о клинике, выбор врача и услуги, ответы на частые вопросы и запись на приём.</p>
-            <a class="work__open" href="https://sulemenevarse-png.github.io/logistika/" target="_blank" rel="noopener">Открыть сайт <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
-          </div>
-        </article>
+          </article>
+          <article class="case">
+            <div class="case__shot">
+              <div class="case__bar"><i></i><i></i><i></i><span>Стоматология «Логистика»</span></div>
+              <video class="work-video" muted loop playsinline preload="none" poster="assets/works/logistika-desktop.jpg" data-src="assets/works/logistika-desktop.mp4" aria-label="Прокрутка сайта стоматологии «Логистика»"></video>
+            </div>
+            <div class="case__meta">
+              <div class="tags"><span>Сайт клиники</span><span>3D-логотип</span><span>Видео</span></div>
+              <h3>Стоматология «Логистика», Серов</h3>
+              <p>Сайт клиники с двумя филиалами: интерактивный 3D-знак, видео о клинике, выбор врача и услуги, ответы на частые вопросы и запись на приём.</p>
+              <a class="work__open" href="https://sulemenevarse-png.github.io/logistika/" target="_blank" rel="noopener">Открыть сайт <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
+            </div>
+          </article>
+          <article class="case">
+            <div class="case__shot">
+              <div class="case__bar"><i></i><i></i><i></i><span>Трекод</span></div>
+              <img class="case__scroll" src="assets/works/trekod-full.jpg" alt="Сайт сервиса «Трекод»" loading="lazy">
+            </div>
+            <div class="case__meta">
+              <div class="tags"><span>B2B-сайт</span><span>Квиз</span><span>Заявки</span></div>
+              <h3>«Трекод» — маркировка стройматериалов</h3>
+              <p>Сайт B2B-сервиса по маркировке «Честный знак» для производителей и поставщиков стройматериалов: услуги, тарифы, интерактивный «маршрут товара», квиз и формы заявок.</p>
+            </div>
+          </article>
+        </div>
+      </div>
 
-        <article class="work reveal">
-          <div class="work__shot work__shot--bot">
-            <div class="ws-chat bot-loop" aria-hidden="true">
-              <div class="ws-chat__msg ws-chat__msg--card">
-                <b>Новая запись с сайта</b>
-                <span>Анна · профгигиена</span>
-                <span>Завтра, 15:30 · филиал на Ленина</span>
+      <!-- Веб-сервисы -->
+      <div class="folder-panel" role="tabpanel" id="panel-services" aria-labelledby="tab-services" hidden>
+        <div class="cases">
+          <article class="case case--wide">
+            <div class="case__shot">
+              <div class="case__bar"><i></i><i></i><i></i><span>ПлатилЛи</span></div>
+              <img class="case__scroll" src="assets/works/platil-full.jpg" alt="Сайт сервиса «ПлатилЛи» с калькулятором пени" loading="lazy">
+            </div>
+            <div class="case__meta">
+              <div class="tags"><span>Веб-сервис</span><span>Калькулятор</span><span>Личный кабинет</span></div>
+              <h3>«ПлатилЛи» — контроль оплаты госконтрактов</h3>
+              <p>Сервис для поставщиков по 44-ФЗ и 223-ФЗ: показывает срок оплаты по контракту, отмечает возможную просрочку, предварительно считает пеню и готовит черновики документов. Сделали сам сервис и его сайт с калькулятором.</p>
+              <a class="work__open" href="https://sulemenevarse-png.github.io/platil/" target="_blank" rel="noopener">Открыть сайт <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Telegram-боты -->
+      <div class="folder-panel" role="tabpanel" id="panel-bots" aria-labelledby="tab-bots" hidden>
+        <div class="cases">
+          <article class="case">
+            <div class="case__shot case__shot--morok">
+              <img class="case__avatar" src="assets/works/morok-avatar.png" alt="Аватар бота «Морок»" loading="lazy">
+              <div class="case__chat case__chat--dark chat-loop" aria-hidden="true">
+                <span class="m">Туман сгущается у брода. За частоколом кто-то зовёт тебя по имени. Что делаешь?</span>
+                <span class="me">Зажигаю факел и иду к воротам</span>
+                <span class="typing"><i></i><i></i><i></i></span>
+                <span class="m">Пламя дрожит. Из тумана выходит девочка в мокрой рубахе — но следов на грязи за ней нет.</span>
+                <span class="me">Достаю серебряную монету</span>
               </div>
-              <div class="ws-chat__slots"><span class="on">Подтвердить</span><span>Перезвонить</span></div>
-              <div class="ws-chat__me">Подтвердить</div>
-              <div class="ws-chat__typing"><i></i><i></i><i></i></div>
-              <div class="ws-chat__ok"><span class="tick"><svg width="8" height="8"><use href="#check"/></svg></span>Запись подтверждена, пациенту ушло напоминание</div>
             </div>
-          </div>
-          <div class="work__meta">
-            <div class="tags"><span>Telegram-бот</span><span>Автоматизация</span></div>
-            <h3>Заявки с сайта — сразу в Telegram</h3>
-            <p>Администратор получает запись в мессенджер и подтверждает её одной кнопкой. Ни одна заявка не теряется в почте.</p>
-          </div>
-        </article>
-
-        <a class="work work--next reveal" href="#contacts">
-          <div class="work__next-mods" aria-hidden="true"><i></i><i></i><i></i><i class="lime"></i></div>
-          <h3>Ваш проект — следующий</h3>
-          <p>Расскажите о задаче — покажем похожие решения и предложим план с ценой и сроками.</p>
-          <span class="btn btn--lime">Обсудить проект <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></span>
-        </a>
+            <div class="case__meta">
+              <div class="tags"><span>Telegram-бот</span><span>Игра</span><span>ИИ</span></div>
+              <h3>«Морок» — ИИ-мастер ролевых игр</h3>
+              <p>Бот ведёт текстовые ролевые игры в тёмном фэнтези — в групповом чате на 2–5 друзей или в личке. Сам описывает мир, персонажей и последствия решений игроков.</p>
+              <a class="work__open" href="https://t.me/morok_rpg_bot" target="_blank" rel="noopener">Открыть в Telegram <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></a>
+            </div>
+          </article>
+          <article class="case">
+            <div class="case__shot case__shot--chat">
+              <div class="case__chat chat-loop" aria-hidden="true">
+                <span class="m card"><b>Новая запись с сайта</b><small>Анна · профгигиена</small><small>Завтра, 15:30 · филиал на Ленина</small></span>
+                <span class="btns"><span class="on">Подтвердить</span><span>Перезвонить</span></span>
+                <span class="me">Подтвердить</span>
+                <span class="typing"><i></i><i></i><i></i></span>
+                <span class="m ok"><span class="tick"><svg width="8" height="8"><use href="#check"/></svg></span>Запись подтверждена, пациенту ушло напоминание</span>
+              </div>
+            </div>
+            <div class="case__meta">
+              <div class="tags"><span>Telegram-бот</span><span>Автоматизация</span></div>
+              <h3>Заявки с сайта — сразу в Telegram</h3>
+              <p>Администратор клиники получает запись в мессенджер и подтверждает её одной кнопкой. Ни одна заявка не теряется в почте.</p>
+            </div>
+          </article>
+        </div>
       </div>
+
+      <a class="work work--next works__cta reveal" href="#contacts">
+        <div class="work__next-mods" aria-hidden="true"><i></i><i></i><i></i><i class="lime"></i></div>
+        <h3>Ваш проект — следующий</h3>
+        <p>Расскажите о задаче — покажем похожие решения и предложим план с ценой и сроками.</p>
+        <span class="btn btn--lime">Обсудить проект <span class="btn__arr"><svg width="12" height="12"><use href="#arrow"/></svg></span></span>
+      </a>
     </div>
   </section>
 
