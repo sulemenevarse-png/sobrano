@@ -619,7 +619,7 @@ button, input, textarea { font: inherit; color: inherit; }
 /* ==========================================================
    Работы — папки (2026-11)
    ========================================================== */
-.folders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
+.folders { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
 .folder {
   position: relative; display: block; height: 240px; padding: 0; border: 0; background: none; cursor: pointer; text-align: left;
   transition: transform .35s var(--ease);
@@ -795,3 +795,8 @@ button, input, textarea { font: inherit; color: inherit; }
 .case__shot--open:hover .case__play, .case__shot--open:focus-visible .case__play { transform: translateY(-2px); background: var(--lime); color: var(--ink); }
 .case__shot--open:hover .case__play svg { color: var(--ink); }
 @media (hover: none) { .case__play { transform: none; height: 38px; } }
+/* две папки: листы не шире 330px, чтобы не выходили за папку */
+.folder__papers img { width: min(78%, 300px); }
+.folder__papers { overflow: visible; }
+.folder { height: 250px; }
+@media (max-width: 760px) { .folder { height: 150px; } .folder__papers img { width: 100%; } }
